@@ -16,10 +16,7 @@
     "url": "http://www.jacklmoore.com",
     "email": "hello@jacklmoore.com"
   },
-  "source": "src/autosize.js",
-  "module": "dist/autosize.esm.js",
-  "unpkg": "dist/autosize.min.js",
-  "main": "dist/autosize.js",
+  "main": "src/autosize.js",
   "license": "MIT",
   "homepage": "http://www.jacklmoore.com/autosize",
   "demo": "http://www.jacklmoore.com/autosize",
