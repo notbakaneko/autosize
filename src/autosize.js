@@ -16,9 +16,12 @@ function assign(ta) {
 		}
 
 		return ()=> arr.forEach(([node, scrollTop]) => {
-			node.style.scrollBehavior = 'auto';
-			node.scrollTop = scrollTop;
-			node.style.scrollBehavior = null;
+			// workaround Safari inertial scrolling freezing from jumping to the same position
+			if (node.scrollTop !== scrollTop) {
+				node.style.scrollBehavior = 'auto';
+				node.scrollTop = scrollTop;
+				node.style.scrollBehavior = null;
+			}
 		});
 	}
 
